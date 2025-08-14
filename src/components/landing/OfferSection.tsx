@@ -1,6 +1,6 @@
 import { Button } from '../ui/button';
 import { Card, CardContent } from '../ui/card';
-import { Check, AlertTriangle, ShieldCheck, Users, Lock } from 'lucide-react';
+import { Check, AlertTriangle, ShieldCheck, Lock } from 'lucide-react';
 
 export default function OfferSection() {
     return (
@@ -36,7 +36,7 @@ export default function OfferSection() {
                                 <a href="#">¡SÍ, QUIERO MI ACCESO AHORA!</a>
                             </Button>
 
-                            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8 w-full max-w-3xl text-sm text-primary">
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8 w-full max-w-3xl text-sm text-primary text-center">
                                 <div className="flex flex-col items-center gap-2">
                                     <Check className="h-6 w-6 text-green-600" />
                                     <span>Acceso Inmediato al Área de Miembros</span>
@@ -45,7 +45,7 @@ export default function OfferSection() {
                                     <ShieldCheck className="h-6 w-6 text-green-600" />
                                     <span>Garantía de Satisfacción Total por 7 Días</span>
                                 </div>
-                                <div className="flex flex-col items-center gap-2">
+                                <div className="flex flex-col items-center gap-2 sm:col-span-1">
                                     <Lock className="h-6 w-6 text-green-600" />
                                     <span>Proceso de Pago 100% Seguro</span>
                                 </div>
@@ -54,7 +54,7 @@ export default function OfferSection() {
                         <div className="bg-yellow-100/50 border-t border-yellow-200 p-4">
                             <div className="flex items-center justify-center text-yellow-900">
                                 <AlertTriangle className="h-5 w-5 mr-3 shrink-0" />
-                                <p className="font-semibold">
+                                <p className="font-semibold text-center">
                                     <span className="font-bold">PRECIO PROMOCIONAL LIMITADO:</span> Esta oferta especial de $7.00 es por tiempo limitado. ¡No pierdas esta oportunidad de transformar tu ministerio!
                                 </p>
                             </div>
