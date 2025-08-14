@@ -32,7 +32,7 @@ export default function HeroSection() {
           <Card className="shadow-2xl rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
             <CardContent className="p-0">
                <Image
-                  src="https://placehold.co/600x400.png"
+                  src="https://i.imgur.com/cN757Bi.png"
                   alt="Mujer orando o predicando con confianza"
                   width={600}
                   height={400}
