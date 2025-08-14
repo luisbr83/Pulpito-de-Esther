@@ -33,7 +33,7 @@ export default function OfferSection() {
                             </div>
 
                             <Button asChild size="lg" className="w-full max-w-md text-xl h-auto py-4" style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }}>
-                                <a href="#">¡SÍ, QUIERO MI ACCESO AHORA!</a>
+                                <a href="https://pay.hotmart.com/Q101290557Q">¡SÍ, QUIERO MI ACCESO AHORA!</a>
                             </Button>
 
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8 w-full max-w-3xl text-sm text-primary text-center">
