@@ -29,9 +29,6 @@ export default function WrongAdviceSection() {
                     <div className="bg-primary/5 border border-primary/20 rounded-lg p-6 text-lg text-primary/80">
                         <p>Si estos métodos funcionaran, ya estarías predicando con confianza. La verdad es que necesitas algo más profundo, más espiritual, más <span className="font-bold text-primary">estratégico.</span></p>
                     </div>
-                    <p className="text-xl font-bold text-primary">
-                        Necesitas el método que está en la Biblia.
-                    </p>
                 </div>
             </div>
         </section>
