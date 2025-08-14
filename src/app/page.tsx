@@ -6,6 +6,7 @@ import MethodSection from '@/components/landing/MethodSection';
 import OfferSection from '@/components/landing/OfferSection';
 import FaqSection from '@/components/landing/FaqSection';
 import Footer from '@/components/landing/Footer';
+import GuaranteeSection from '@/components/landing/GuaranteeSection';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <OfferSection />
         <TestimonialsSection />
         <FaqSection />
+        <GuaranteeSection />
       </main>
       <Footer />
     </div>
