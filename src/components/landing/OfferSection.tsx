@@ -36,14 +36,10 @@ export default function OfferSection() {
                                 <a href="#">¡SÍ, QUIERO MI ACCESO AHORA!</a>
                             </Button>
 
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 w-full max-w-3xl text-sm text-primary">
+                            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8 w-full max-w-3xl text-sm text-primary">
                                 <div className="flex flex-col items-center gap-2">
                                     <Check className="h-6 w-6 text-green-600" />
                                     <span>Acceso Inmediato al Área de Miembros</span>
-                                </div>
-                                <div className="flex flex-col items-center gap-2">
-                                    <Users className="h-6 w-6 text-green-600" />
-                                    <span>Comunidad Privada de Apoyo</span>
                                 </div>
                                 <div className="flex flex-col items-center gap-2">
                                     <ShieldCheck className="h-6 w-6 text-green-600" />
