@@ -7,6 +7,7 @@ import OfferSection from '@/components/landing/OfferSection';
 import FaqSection from '@/components/landing/FaqSection';
 import Footer from '@/components/landing/Footer';
 import GuaranteeSection from '@/components/landing/GuaranteeSection';
+import WrongAdviceSection from '@/components/landing/WrongAdviceSection';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <ProblemSection />
+        <WrongAdviceSection />
         <MethodSection />
         <OfferSection />
         <TestimonialsSection />
