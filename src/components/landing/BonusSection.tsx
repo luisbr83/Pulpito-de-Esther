@@ -12,7 +12,7 @@ const features = [
 
 export default function BonusSection() {
     return (
-        <section id="bonus" className="py-12 md:py-20 lg:py-24 bg-background">
+        <section id="bonus" className="py-12 md:py-20 lg:py-24 bg-card">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center space-y-4 mb-10">
                     <div className="inline-block bg-accent/10 text-accent p-3 rounded-full">
