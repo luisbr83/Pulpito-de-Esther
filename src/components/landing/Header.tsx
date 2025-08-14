@@ -39,7 +39,7 @@ export default function Header() {
   const timerComponents: JSX.Element[] = [];
 
   Object.keys(timeLeft).forEach((interval) => {
-    if (!timeLeft[interval as keyof typeof timeLeft]) {
+    if (!timeLeft[interval as keyof typeof timeLeft] && timeLeft[interval as keyof typeof timeLeft] !== 0) {
       return;
     }
 
@@ -52,20 +52,12 @@ export default function Header() {
 
   return (
     <header className="bg-background/80 sticky top-0 z-40 w-full border-b backdrop-blur-sm">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <a href="#" className="font-headline text-xl font-bold text-primary">
-          Púlpito de Esther
-        </a>
-        <div className="flex items-center gap-4">
-            <div className="text-center">
-                <p className="text-xs text-primary font-semibold">¡La oferta termina en!</p>
-                <div className="text-xl font-bold text-accent font-mono">
-                    {timerComponents.length ? timerComponents : <span>00:00:00</span>}
-                </div>
+      <div className="container mx-auto flex h-16 items-center justify-center px-4 md:px-6">
+        <div className="text-center">
+            <p className="text-sm text-primary font-semibold">¡La oferta termina en!</p>
+            <div className="text-3xl font-bold text-accent font-mono">
+                {timerComponents.length ? timerComponents : <span>00:00:00</span>}
             </div>
-             <Button asChild style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }}>
-                <a href="#offer">¡ACTIVA TU ACCESO!</a>
-            </Button>
         </div>
       </div>
     </header>
