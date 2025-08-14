@@ -23,7 +23,7 @@ export default function BonusSection() {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-5xl mx-auto">
-                    <div className="space-y-6">
+                    <div className="md:order-1 space-y-6">
                         <p className="text-lg text-muted-foreground">
                             Imagina que, además del Método Esther, tengas en tus manos una guía práctica y espiritual que te muestre paso a paso cómo preparar sermones impactantes que toquen profundamente el corazón de tu audiencia.
                         </p>
@@ -53,7 +53,7 @@ export default function BonusSection() {
                             Hoy, al activar tu acceso al Método Esther, lo recibes completamente GRATIS.
                         </p>
                     </div>
-                     <div className="flex items-center justify-center">
+                     <div className="flex items-center justify-center order-first md:order-last">
                         <Image
                             src="https://i.imgur.com/0J72exD.png"
                             alt="Guía de Preparación de Sermones"
