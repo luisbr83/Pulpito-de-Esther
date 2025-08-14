@@ -1,6 +1,7 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -22,7 +23,7 @@ function SubmitButton() {
 
 export default function SermonArchitect() {
   const initialState: SermonArchitectState = {};
-  const [state, formAction] = useFormState(createSermon, initialState);
+  const [state, formAction] = useActionState(createSermon, initialState);
   const { toast } = useToast();
   const [benefits, setBenefits] = useState(['']);
 
