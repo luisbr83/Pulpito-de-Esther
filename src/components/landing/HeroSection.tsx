@@ -44,8 +44,11 @@ export default function HeroSection() {
                   ))}
                 </ul>
                  <div className="flex justify-center mt-6">
-                     <Button asChild size="lg" className="text-lg w-full" style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }}>
-                    <a href="#offer">¡ACTIVA TU ACCESO AHORA!</a>
+                     <Button asChild size="lg" className="text-lg w-full flex-col h-auto py-3" style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }}>
+                        <a href="#offer">
+                            <span>¡ACTIVA TU ACCESO AHORA!</span>
+                            <span className="text-sm font-normal opacity-90">(Por solo US$ 7.00)</span>
+                        </a>
                   </Button>
                 </div>
               </div>
