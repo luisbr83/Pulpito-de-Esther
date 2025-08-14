@@ -23,11 +23,6 @@ export default function HeroSection() {
             <p className="text-lg md:text-xl text-muted-foreground">
               De Mujer Común a Predicadora Influyente (Sin Años de Estudio). Transforma tu llamado en acción con el Método Esther.
             </p>
-            <div className="flex justify-center lg:justify-start">
-                 <Button asChild size="lg" className="text-lg" style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }}>
-                <a href="#offer">¡ACTIVA TU ACCESO AHORA!</a>
-              </Button>
-            </div>
           </div>
           <Card className="shadow-2xl rounded-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
             <CardContent className="p-0">
@@ -48,6 +43,11 @@ export default function HeroSection() {
                     </li>
                   ))}
                 </ul>
+                 <div className="flex justify-center mt-6">
+                     <Button asChild size="lg" className="text-lg w-full" style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }}>
+                    <a href="#offer">¡ACTIVA TU ACCESO AHORA!</a>
+                  </Button>
+                </div>
               </div>
             </CardContent>
           </Card>
