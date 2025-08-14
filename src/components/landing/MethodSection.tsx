@@ -29,7 +29,7 @@ const phases = [
 
 export default function MethodSection() {
   return (
-    <section id="method" className="pt-12 md:pt-20 lg:pt-24 bg-background">
+    <section id="method" className="py-12 md:py-20 lg:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center space-y-4 mb-10">
           <h2 className="text-3xl md:text-4xl font-bold font-headline text-primary">Tu Plan de Ascenso al Púlpito: El Método Esther</h2>
