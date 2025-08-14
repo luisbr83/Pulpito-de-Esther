@@ -3,7 +3,7 @@ import { CheckCircle, Clock, Shield } from 'lucide-react';
 
 export default function GuaranteeSection() {
     return (
-        <section id="guarantee" className="py-12 md:py-20 lg:py-24 bg-background">
+        <section id="guarantee" className="py-12 md:py-20 bg-card">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="flex flex-col items-center text-center space-y-6">
                     <div className="relative inline-block">
