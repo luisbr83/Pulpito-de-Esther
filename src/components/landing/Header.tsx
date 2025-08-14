@@ -6,18 +6,29 @@ import { Button } from '@/components/ui/button';
 export default function Header() {
   const calculateTimeLeft = () => {
     const now = new Date();
-    const endOfDay = new Date(now);
-    endOfDay.setHours(23, 59, 59, 999);
+    const endOfPeriod = new Date(now);
+    
+    // Set the end time to the next 12-hour mark (e.g., 12:00 or 00:00)
+    const currentHour = now.getHours();
+    if (currentHour < 12) {
+        endOfPeriod.setHours(11, 59, 59, 999);
+    } else {
+        endOfPeriod.setHours(23, 59, 59, 999);
+    }
 
-    const difference = endOfDay.getTime() - now.getTime();
+    const difference = endOfPeriod.getTime() - now.getTime();
 
     let timeLeft = {};
 
     if (difference > 0) {
+      const hours = Math.floor(difference / (1000 * 60 * 60));
+      const minutes = Math.floor((difference / 1000 / 60) % 60);
+      const seconds = Math.floor((difference / 1000) % 60);
+      
       timeLeft = {
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
+        hours: hours > 12 ? hours % 12 : hours,
+        minutes: minutes,
+        seconds: seconds,
       };
     } else {
         timeLeft = { hours: 0, minutes: 0, seconds: 0 };
