@@ -9,6 +9,7 @@ import Footer from '@/components/landing/Footer';
 import GuaranteeSection from '@/components/landing/GuaranteeSection';
 import WrongAdviceSection from '@/components/landing/WrongAdviceSection';
 import SecretStrategySection from '@/components/landing/SecretStrategySection';
+import BonusSection from '@/components/landing/BonusSection';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <WrongAdviceSection />
         <SecretStrategySection />
         <MethodSection />
+        <BonusSection />
         <OfferSection />
         <TestimonialsSection />
         <FaqSection />
