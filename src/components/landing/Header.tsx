@@ -1,10 +1,17 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button';
+
+type TimeLeft = {
+    hours: number;
+    minutes: number;
+    seconds: number;
+};
 
 export default function Header() {
-  const calculateTimeLeft = () => {
+  const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
+
+  const calculateTimeLeft = (): TimeLeft => {
     const now = new Date();
     const endOfPeriod = new Date(now);
     
@@ -18,48 +25,33 @@ export default function Header() {
 
     const difference = endOfPeriod.getTime() - now.getTime();
 
-    let timeLeft = {};
-
     if (difference > 0) {
       const hours = Math.floor(difference / (1000 * 60 * 60));
       const minutes = Math.floor((difference / 1000 / 60) % 60);
       const seconds = Math.floor((difference / 1000) % 60);
       
-      timeLeft = {
+      return {
         hours: hours > 12 ? hours % 12 : hours,
         minutes: minutes,
         seconds: seconds,
       };
-    } else {
-        timeLeft = { hours: 0, minutes: 0, seconds: 0 };
     }
 
-    return timeLeft;
+    return { hours: 0, minutes: 0, seconds: 0 };
   };
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-
   useEffect(() => {
-    const timer = setTimeout(() => {
+    // Set initial time on client mount
+    setTimeLeft(calculateTimeLeft());
+
+    const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearTimeout(timer);
-  });
+    return () => clearInterval(timer);
+  }, []);
 
-  const timerComponents: JSX.Element[] = [];
-
-  Object.keys(timeLeft).forEach((interval) => {
-    if (!timeLeft[interval as keyof typeof timeLeft] && timeLeft[interval as keyof typeof timeLeft] !== 0) {
-      return;
-    }
-
-    timerComponents.push(
-      <span key={interval}>
-        {String(timeLeft[interval as keyof typeof timeLeft]).padStart(2, '0')}{interval !== 'seconds' ? ':' : ''}
-      </span>
-    );
-  });
+  const formatTime = (time: number) => String(time).padStart(2, '0');
 
   return (
     <header className="bg-background/80 sticky top-0 z-40 w-full border-b backdrop-blur-sm">
@@ -67,7 +59,15 @@ export default function Header() {
         <div className="text-center">
             <p className="text-sm text-primary font-semibold">¡La oferta termina en!</p>
             <div className="text-3xl font-bold text-accent font-mono">
-                {timerComponents.length ? timerComponents : <span>00:00:00</span>}
+                {timeLeft ? (
+                    <>
+                        <span>{formatTime(timeLeft.hours)}</span>:
+                        <span>{formatTime(timeLeft.minutes)}</span>:
+                        <span>{formatTime(timeLeft.seconds)}</span>
+                    </>
+                ) : (
+                    <span>00:00:00</span>
+                )}
             </div>
         </div>
       </div>
