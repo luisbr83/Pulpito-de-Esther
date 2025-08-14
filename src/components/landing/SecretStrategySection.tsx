@@ -9,7 +9,7 @@ const wrongPaths = [
 
 export default function SecretStrategySection() {
     return (
-        <section id="secret-strategy" className="pt-0 pb-12 bg-background">
+        <section id="secret-strategy" className="pt-12 pb-12 bg-card">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="max-w-3xl mx-auto text-center space-y-6">
                     <p className="text-xl text-primary font-semibold">Tu obstáculo no es la falta de unción divina.</p>
