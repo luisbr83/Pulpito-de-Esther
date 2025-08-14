@@ -3,7 +3,6 @@ import HeroSection from '@/components/landing/HeroSection';
 import ProblemSection from '@/components/landing/ProblemSection';
 import TestimonialsSection from '@/components/landing/TestimonialsSection';
 import MethodSection from '@/components/landing/MethodSection';
-import SermonArchitect from '@/components/landing/SermonArchitect';
 import OfferSection from '@/components/landing/OfferSection';
 import FaqSection from '@/components/landing/FaqSection';
 import Footer from '@/components/landing/Footer';
@@ -17,7 +16,6 @@ export default function Home() {
         <ProblemSection />
         <TestimonialsSection />
         <MethodSection />
-        <SermonArchitect />
         <OfferSection />
         <FaqSection />
       </main>
