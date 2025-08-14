@@ -7,10 +7,6 @@ import {
 
 const faqItems = [
     {
-        question: "¿Qué son los 3 módulos transformadores?",
-        answer: "El Método Esther se divide en tres módulos principales: 1) Identidad y Llamado: Para afirmar quién eres en Dios. 2) Sanidad y Unción: Para liberarte del pasado y conectar con el Espíritu Santo. 3) Estructura y Entrega: Para aprender las herramientas prácticas de la predicación efectiva."
-    },
-    {
         question: "¿Necesito experiencia previa o estudios teológicos?",
         answer: "Absolutamente no. El Método Esther está diseñado específicamente para mujeres que sienten el llamado pero no saben por dónde empezar. Te llevamos de la mano desde cero hasta el púlpito, sin necesidad de estudios formales previos."
     },
