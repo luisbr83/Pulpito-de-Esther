@@ -36,7 +36,7 @@ export default function SecretStrategySection() {
                         <p>Si estos métodos dieran resultados, ya estarías desatando tu poder en el púlpito. La verdad es que necesitas una revelación más profunda, una conexión más espiritual, una estrategia más <span className="font-bold text-primary">efectiva.</span></p>
                     </div>
                     <p className="text-xl font-bold text-primary">
-                        Necesitas el método ancestral revelado en la Biblia.
+                        Necesitas el método milenario revelado en la Biblia.
                     </p>
                     <div className="pt-8">
                         <h2 className="text-3xl md:text-4xl font-bold font-headline text-primary">
