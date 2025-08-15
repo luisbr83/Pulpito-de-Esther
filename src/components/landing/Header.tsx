@@ -9,16 +9,13 @@ type TimeLeft = {
 };
 
 export default function Header() {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft | null>({
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
 
   const calculateTimeLeft = (): TimeLeft => {
     const now = new Date();
     const endOfPeriod = new Date(now);
     
+    // Set the end time to the next 12-hour mark (e.g., 12:00 or 00:00)
     const currentHour = now.getHours();
     if (currentHour < 12) {
         endOfPeriod.setHours(11, 59, 59, 999);
@@ -44,8 +41,8 @@ export default function Header() {
   };
 
   useEffect(() => {
-    // Desativado: setTimeLeft(calculateTimeLeft());
-    // Desativado: atualização automática
+    // Código original do cronômetro (desativado, mas preservado)
+    // setTimeLeft(calculateTimeLeft());
     // const timer = setInterval(() => {
     //   setTimeLeft(calculateTimeLeft());
     // }, 1000);
@@ -58,18 +55,23 @@ export default function Header() {
     <header className="bg-background/80 sticky top-0 z-40 w-full border-b backdrop-blur-sm">
       <div className="container mx-auto flex h-16 items-center justify-center px-4 md:px-6">
         <div className="text-center">
-            <p className="text-sm text-primary font-semibold">¡La oferta termina en!</p>
-            <div className="text-3xl font-bold text-accent font-mono">
-                {timeLeft ? (
-                    <>
-                        <span>{formatTime(timeLeft.hours)}</span>:
-                        <span>{formatTime(timeLeft.minutes)}</span>:
-                        <span>{formatTime(timeLeft.seconds)}</span>
-                    </>
-                ) : (
-                    <span>00:00:00</span>
-                )}
-            </div>
+          {/* Cronômetro oculto */}
+          {false && (
+            <>
+              <p className="text-sm text-primary font-semibold">¡La oferta termina en!</p>
+              <div className="text-3xl font-bold text-accent font-mono">
+                  {timeLeft ? (
+                      <>
+                          <span>{formatTime(timeLeft.hours)}</span>:
+                          <span>{formatTime(timeLeft.minutes)}</span>:
+                          <span>{formatTime(timeLeft.seconds)}</span>
+                      </>
+                  ) : (
+                      <span>00:00:00</span>
+                  )}
+              </div>
+            </>
+          )}
         </div>
       </div>
     </header>
