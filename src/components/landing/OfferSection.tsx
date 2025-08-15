@@ -28,7 +28,7 @@ export default function OfferSection() {
                             </p>
                             
                             <div className="my-6">
-                                <p className="text-lg text-muted-foreground line-through">Precio Normal: US$ 97.00</p>
+                                <p className="text-lg text-muted-foreground line-through">Precio Normal: US$ 47.00</p>
                                 <p className="text-5xl md:text-6xl font-bold text-primary">Solo US$ 7.00</p>
                             </div>
 
