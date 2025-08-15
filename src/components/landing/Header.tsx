@@ -9,13 +9,16 @@ type TimeLeft = {
 };
 
 export default function Header() {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
+  const [timeLeft, setTimeLeft] = useState<TimeLeft | null>({
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   const calculateTimeLeft = (): TimeLeft => {
     const now = new Date();
     const endOfPeriod = new Date(now);
     
-    // Set the end time to the next 12-hour mark (e.g., 12:00 or 00:00)
     const currentHour = now.getHours();
     if (currentHour < 12) {
         endOfPeriod.setHours(11, 59, 59, 999);
@@ -41,14 +44,12 @@ export default function Header() {
   };
 
   useEffect(() => {
-    // Set initial time on client mount
-    setTimeLeft(calculateTimeLeft());
-
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-
-    return () => clearInterval(timer);
+    // Desativado: setTimeLeft(calculateTimeLeft());
+    // Desativado: atualização automática
+    // const timer = setInterval(() => {
+    //   setTimeLeft(calculateTimeLeft());
+    // }, 1000);
+    // return () => clearInterval(timer);
   }, []);
 
   const formatTime = (time: number) => String(time).padStart(2, '0');
