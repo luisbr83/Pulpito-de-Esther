@@ -1,3 +1,5 @@
+'use client';
+
 import { XCircle } from 'lucide-react';
 
 const wrongAdvice = [
@@ -7,7 +9,16 @@ const wrongAdvice = [
     { text: '"Practica hasta que te salga"', subtext: 'El camino del trauma, no del llamado' }
 ];
 
+// Flag para mostrar/ocultar seção
+const SHOW_SECTION = false;
+
 export default function WrongAdviceSection() {
+    if (!SHOW_SECTION) {
+        // 🔹 Não renderiza nada
+        return null;
+    }
+
+    // 🔹 Código original mantido, só será renderizado se SHOW_SECTION = true
     return (
         <section id="wrong-advice" className="py-12 md:py-20 bg-background">
             <div className="container mx-auto px-4 md:px-6">
@@ -27,7 +38,10 @@ export default function WrongAdviceSection() {
                         ))}
                     </div>
                     <div className="bg-primary/5 border border-primary/20 rounded-lg p-6 text-lg text-primary/80">
-                        <p>Si estos métodos funcionaran, ya estarías predicando con confianza. La verdad es que necesitas algo más profundo, más espiritual, más <span className="font-bold text-primary">estratégico.</span></p>
+                        <p>
+                            Si estos métodos funcionaran, ya estarías predicando con confianza. 
+                            La verdad es que necesitas algo más profundo, más espiritual, más <span className="font-bold text-primary">estratégico.</span>
+                        </p>
                     </div>
                 </div>
             </div>
