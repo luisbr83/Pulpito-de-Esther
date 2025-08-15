@@ -12,7 +12,7 @@ export default function OfferSection() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 text-lg">
                         <div className="bg-background/50 p-6 rounded-lg border">
                             <h3 className="font-bold text-muted-foreground">Programas de Mentoría Personalizada:</h3>
-                            <p className="text-2xl font-bold text-primary">$1,000 USD o más</p>
+                            <p className="text-2xl font-bold text-primary">$100 USD o más</p>
                         </div>
                         <div className="bg-background/50 p-6 rounded-lg border">
                             <h3 className="font-bold text-muted-foreground">Cursos Avanzados de Predicación:</h3>
