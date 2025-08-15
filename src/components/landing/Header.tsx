@@ -15,7 +15,6 @@ export default function Header() {
     const now = new Date();
     const endOfPeriod = new Date(now);
     
-    // Set the end time to the next 12-hour mark (e.g., 12:00 or 00:00)
     const currentHour = now.getHours();
     if (currentHour < 12) {
         endOfPeriod.setHours(11, 59, 59, 999);
@@ -51,27 +50,30 @@ export default function Header() {
 
   const formatTime = (time: number) => String(time).padStart(2, '0');
 
+  // Controle para exibir ou não o cronômetro
+  const mostrarCronometro = false;
+
+  if (!mostrarCronometro) {
+    // Se o cronômetro estiver desativado, não renderiza nada
+    return null;
+  }
+
   return (
     <header className="bg-background/80 sticky top-0 z-40 w-full border-b backdrop-blur-sm">
       <div className="container mx-auto flex h-16 items-center justify-center px-4 md:px-6">
         <div className="text-center">
-          {/* Cronômetro oculto */}
-          {false && (
-            <>
-              <p className="text-sm text-primary font-semibold">¡La oferta termina en!</p>
-              <div className="text-3xl font-bold text-accent font-mono">
-                  {timeLeft ? (
-                      <>
-                          <span>{formatTime(timeLeft.hours)}</span>:
-                          <span>{formatTime(timeLeft.minutes)}</span>:
-                          <span>{formatTime(timeLeft.seconds)}</span>
-                      </>
-                  ) : (
-                      <span>00:00:00</span>
-                  )}
-              </div>
-            </>
-          )}
+            <p className="text-sm text-primary font-semibold">¡La oferta termina en!</p>
+            <div className="text-3xl font-bold text-accent font-mono">
+                {timeLeft ? (
+                    <>
+                        <span>{formatTime(timeLeft.hours)}</span>:
+                        <span>{formatTime(timeLeft.minutes)}</span>:
+                        <span>{formatTime(timeLeft.seconds)}</span>
+                    </>
+                ) : (
+                    <span>00:00:00</span>
+                )}
+            </div>
         </div>
       </div>
     </header>
