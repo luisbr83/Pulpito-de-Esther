@@ -7,7 +7,7 @@ import OfferSection from '@/components/landing/OfferSection';
 import FaqSection from '@/components/landing/FaqSection';
 import Footer from '@/components/landing/Footer';
 import GuaranteeSection from '@/components/landing/GuaranteeSection';
-import WrongAdviceSection from '@/components/landing/WrongAdviceSection';
+// import WrongAdviceSection from '@/components/landing/WrongAdviceSection';
 import SecretStrategySection from '@/components/landing/SecretStrategySection';
 import BonusSection from '@/components/landing/BonusSection';
 
